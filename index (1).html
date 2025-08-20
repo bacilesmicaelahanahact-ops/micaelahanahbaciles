@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Bootstrap Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="50">
+
+<!-- Navbar -->
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">My Page</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
+        <li class="nav-item"><a class="nav-link" href="#family">Family</a></li>
+        <li class="nav-item"><a class="nav-link" href="#favorites">Favorites</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sports">Sports</a></li>
+        <li class="nav-item"><a class="nav-link" href="#feedback">Feedback</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Profile -->
+<section id="profile" class="p-5 text-center" style="background-color: #fce4ec;">
+  <img src="m.jpg" 
+       class="rounded-circle mb-3 border border-3 border-danger shadow"
+       alt="Profile Picture"
+       style="width: 200px; height: 200px; object-fit: cover;">
+  <h2>Micaela Hanah Baciles <span class="badge bg-danger">Student</span></h2>
+  <p class="lead">Hi! I’m Micaela, a creative soul who loves art, music, and adventures.</p>
+</section>
+
+<section id="hobbies" class="p-5">
+  <div class="container">
+    <h3 class="mb-4">Hobbies</h3>
+    <div class="row g-3">
+
+     <style>
+  /* Card hover animation */
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+</style>
+
+<section id="hobbies" class="p-5">
+  <div class="container">
+    <div class="row g-3">
+
+      <!-- Jogging -->
+      <div class="col-md-4">
+        <div class="card text-center">
+          <img src="j.jpg" class="card-img-top" alt="Jogging" style="height:200px; object-fit:cover;">
+          <div class="card-body">
+            Jogging
+          </div>
+        </div>
+      </div>
+
+      <!-- Traveling -->
+      <div class="col-md-4">
+        <div class="card text-center">
+          <img src="t.jpg" class="card-img-top" alt="Traveling" style="height:200px; object-fit:cover;">
+          <div class="card-body">
+            Traveling
+          </div>
+        </div>
+      </div>
+
+      <!-- Listening to Music -->
+      <div class="col-md-4">
+        <div class="card text-center">
+          <img src="l.jpg" class="card-img-top" alt="Music" style="height:200px; object-fit:cover;">
+          <div class="card-body">
+            Listening to Music
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Family -->
+<section id="family" class="p-5 bg-light text-center">
+  <div class="container">
+    <h3 class="mb-4">Family Members</h3>
+
+    <!-- One Moving Family Picture -->
+    <img src="f.jpg" alt="Family Picture" 
+         class="img-fluid rounded shadow mb-4 family-pic" 
+         style="max-width: 400px;">
+
+    <!-- Family List -->
+    <ul class="list-group">
+      <li class="list-group-item">Mother - Melanie Tuazon</li>
+      <li class="list-group-item">Father - Moises Baciles</li>
+      <li class="list-group-item">Brother - Dave Baciles</li>
+      <li class="list-group-item">Sister - Micajhoy Baciles</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Animation Style -->
+<style>
+  .family-pic {
+    animation: bounce 3s infinite ease-in-out;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+</style>
+
+
+
+<!-- Favorites -->
+<section id="favorites" class="p-5">
+  <div class="container"><!-- Family -->
+<section id="family" class="p-5 bg-light text-center">
+  <div class="container">
+    <h3>Favorites</h3>
+    <table class="table table-bordered table-hover">
+      <thead class="table-danger">
+        <tr><th>Category</th><th>Favorite</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Food</td><td>Ramen </td></tr>
+        <tr><td>Movie</td><td>Netflix and chill</td></tr>
+        <tr><td>Color</td><td>Purple & Pink </td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- Sports -->
+<section id="sports" class="p-5 bg-light">
+  <div class="container">
+    <h3>Sports</h3>
+    <div class="accordion" id="sportsAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#sport1">Volleyball</button></h2>
+        <div id="sport1" class="accordion-collapse collapse show" data-bs-parent="#sportsAccordion"><div class="accordion-body">I enjoy playing volleyball with my classmates after school.</div></div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sport2">Badminton</button></h2>
+        <div id="sport2" class="accordion-collapse collapse" data-bs-parent="#sportsAccordion"><div class="accordion-body">Badminton is fun and keeps me active.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Feedback Form -->
+<section id="feedback" class="p-5">
+  <div class="container">
+    <h3>Feedback Form</h3>
+    <form>
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Message</label>
+        <textarea class="form-control" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-danger">Submit</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p>&copy; 2025 Micaela's Page</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
